@@ -10,8 +10,9 @@ const Train = ({ id, line, status, canEdit, updateTrains }) => {
 
     fetch(`/api/v1/trains/${trainId}`, {
       method: 'PATCH',
-      body: JSON.stringify({ 
-        train: { status: value }
+      body: JSON.stringify({
+        train: { status: value },
+        token
       }),
       headers: {
         'Content-Type': 'application/json'

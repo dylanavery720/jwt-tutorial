@@ -18,6 +18,7 @@ export class Admin extends React.Component {
               {...train}
               updateTrains={updateTrains}
               canEdit={true}
+              token={authStatus.token}
             />
           )}
         </div>
